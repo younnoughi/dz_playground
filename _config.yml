@@ -2,14 +2,14 @@
 site_name: "DZ Playground"
 title: DZ Playground | Experimenting with technology.
 description: "DZ community of makers"
-url: ""
+url: "dz-playground.com"
 author:
   name: "Yacine OUNNOUGHI "
   email: "ounnoughiyacine@gmail.com.com"
   url: ""
 
 # Build settings
-baseurl: ""
+baseurl: "/"
 markdown: kramdown
 source: .
 destination: ./_site
