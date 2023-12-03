@@ -9,7 +9,7 @@ author:
   url: ""
 
 # Build settings
-baseurl: "dz-playground.com"
+baseurl: ""
 markdown: kramdown
 source: .
 destination: ./_site
