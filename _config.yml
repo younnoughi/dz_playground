@@ -9,10 +9,10 @@ author:
   url: ""
 
 # Build settings
-baseurl: "/"
+baseurl: /
 markdown: kramdown
 source: .
-destination: ./_site
+destination: ./_site/
 permalink: /:title
 paginate: 8
 paginate_path: /page:num/
@@ -32,14 +32,24 @@ defaults:
       layout: "post"
 
 # Plugins
-plugins: [jekyll-paginate, jekyll-target-blank]
+plugins:
+  - jekyll-paginate
+  - jekyll-target-blank
 
   # - jekyll-diagrams
+
+
+target-blank:
+   noopener: false
+   noreferrer: false
+
+sass:
+    style: compressed
 
 # Custom variables
 version: "0.0.1"
 
 # Options
-custom_header: true
+custom_header: false
 custom_nav_footer: false
 reverse: false
