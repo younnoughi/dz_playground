@@ -151,34 +151,7 @@ html, body {
 }
 
 
-#post-header {
-	text-align: left;
-  padding: 20px 0;
-  padding-left: 20px;
-  position: relative;
-  a {
-  	text-decoration: none;
-  	color: $text-color;
-  	display: inline-block;
-  }
-  img {
-  	max-height: 25px;
-  	margin: 0 auto;
-  	display: block;
-  }
-  h1 {
-  	font-family: 'Signika', sans-serif; //Emerald logo font
-    font-weight: 600;
-  }
-  &:after {
-  	display: block;
-    content: '';
-    width: 5rem;
-    height: 1px;
-    margin: 23px auto;
-    background-color: lighten($text-color, 70%);
-  }
-}
+
 /* Posts */
 
 #posts {
