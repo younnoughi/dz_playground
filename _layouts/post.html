@@ -5,7 +5,7 @@ layout: default
 <article id="post-page">
 	<h2>{{ page.title }}</h2>
 	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}
-		| Author: {% if page.author %}{{ page.author }}{%else%} {{ site.site_name}}{% endif %}</time>
+		| Author: {% if page.author %}{{ page.author }}{% else %} {{ site.site_name }}{% endif %}</time>
 	<hr>
 	<div class="content">
 

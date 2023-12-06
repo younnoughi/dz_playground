@@ -1,6 +1,7 @@
 # Site settings
 site_name: "DZ Playground"
 title: DZ Playground | Experimenting with technology.
+slogan: "Experimenting with technology"
 description: "DZ community of makers"
 url: "dz-playground.com"
 author:
@@ -37,7 +38,8 @@ plugins:
   - jekyll-target-blank
 
   # - jekyll-diagrams
-
+target-blank:
+    css_class: ext-link
 
 target-blank:
    noopener: false

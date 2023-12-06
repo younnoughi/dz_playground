@@ -11,19 +11,22 @@ function toggle() {
 
 	  var button = document.getElementById("menu");
 	  var site = document.getElementById("wrap");
-	  
+
 	  if (nav.className == "menu-open" || nav.className == "menu-open-left") {
 	  	  nav.className = "";
 	  	  button.className = "";
 	  	  site.className = "";
+		  console.log("1")
 	  } else if (reverse !== null) {
 	  	  nav.className += "menu-open-left";
 	  	  button.className += "btn-close";
 	  	  site.className += "fixed";
+			console.log("2")
 	  } else {
 	  	  nav.className += "menu-open";
 	  	  button.className += "btn-close";
 	  	  site.className += "fixed";
+			console.log("3")
 	    }
 	}
 
