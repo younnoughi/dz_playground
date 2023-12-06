@@ -15,9 +15,11 @@
 	  </a>
 
       <!-- Header -->
+    {% if site.custom_header == true %}
+      {% include header-custom.html %}
+    {% else %}
       {% include header.html %}
-
-
+    {% endif %}
     <!-- Main content -->
 	  <div id="container">
 
