@@ -16,17 +16,14 @@ function toggle() {
 	  	  nav.className = "";
 	  	  button.className = "";
 	  	  site.className = "";
-		  console.log("1")
 	  } else if (reverse !== null) {
 	  	  nav.className += "menu-open-left";
 	  	  button.className += "btn-close";
 	  	  site.className += "fixed";
-			console.log("2")
 	  } else {
 	  	  nav.className += "menu-open";
 	  	  button.className += "btn-close";
 	  	  site.className += "fixed";
-			console.log("3")
 	    }
 	}
 

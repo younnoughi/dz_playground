@@ -15,8 +15,8 @@
 	  </a>
 
       <!-- Header -->
-      {% if site.custom_header == true %}
-        {% include header-custom.html %}
+      {% if site.url != page.url %}
+        {% include post-header.html %}
       {% else %}
         {% include header.html %}
       {% endif %}
