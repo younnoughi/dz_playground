@@ -118,7 +118,7 @@ html, body {
 
 #container {
 	margin:0 auto;
-	max-width: 730px;
+  max-width: 1000px;
 	padding: 0 1.5rem;
 }
 
@@ -272,7 +272,7 @@ footer {
 	background-color: $main-color;
 	color: $background-color;
 	text-align: center;
-	position: fixed; //fixed; //
+	position: absolute; //fixed;
   width: 100%;
   bottom: 0;
 }
