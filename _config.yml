@@ -37,10 +37,6 @@ plugins:
   - jekyll-paginate
   - jekyll-target-blank
 
-  # - jekyll-diagrams
-target-blank:
-    css_class: ext-link
-
 target-blank:
    noopener: false
    noreferrer: false
