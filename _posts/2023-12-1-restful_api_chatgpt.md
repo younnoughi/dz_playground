@@ -1,14 +1,17 @@
 ---
 title: AI generated article
 author: "chatGPT"
+tags: [ai]
 ---
 
 
 # Introduction to RESTful APIs in Python
 
 ## What is a RESTful API?
-
-REST, or Representational State Transfer, is an architectural style for designing networked applications. RESTful APIs (Application Programming Interfaces) adhere to the principles of REST, making them scalable, flexible, and easy to understand. These APIs play a crucial role in modern web development, enabling communication between different software systems.
+<!-- excerpt start -->
+REST, or Representational State Transfer, is an architectural style for designing networked applications. RESTful APIs (Application Programming Interfaces) adhere to the principles of REST, making them scalable, flexible, and easy to understand.
+<!-- excerpt end -->
+These APIs play a crucial role in modern web development, enabling communication between different software systems.
 
 ## Key Principles of RESTful APIs
 

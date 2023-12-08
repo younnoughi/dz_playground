@@ -41,6 +41,9 @@ target-blank:
 sass:
     style: compressed
 
+
+excerpt_separator: "<!-- excerpt end -->"
+
 # Custom variables
 version: "0.0.1"
 

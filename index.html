@@ -1,16 +1,39 @@
 ---
 layout: default
 ---
+
+<!-- Categories -->
+<div class="tags-expo">
+	<div class="tags-expo-list">
+	{% for tag in site.tags %}
+	<!-- <i class="fa-solid fa-tag"></i> -->
+	<i class="fa-solid fa-tag" style="color: #004221;"></i>
+	<a href="tags#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] | upcase }} </a>
+
+	{% endfor %}
+	<hr>
+</div>
+</div>
+
 <!-- Posts -->
 <ul id="posts">
 
 	{% if paginator.posts %}
 		{% for post in paginator.posts %}
+			{% if post.language == 'arabic' %}
+		   <li class="post"  dir="rtl" lang="ar">
+			{% else %}
+			<li class="post">
+			{% endif %}
 
-		  <li class="post">
-		  	<h2><a href="{% if site.baseurl == "/" %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
-		  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">{{ post.date | date_to_string }}</time>
-		  	<p>{{ post.content | strip_html | truncatewords:50 }}</p>
+		  	<h2><a href="{% if site.baseurl == '/' %}{{ post.url }}{% else %}{{ post.url | prepend: site.baseurl }}{% endif %}">{{ post.title }}</a></h2>
+		  	<time datetime="{{ post.date | date_to_xmlschema }}" class="by-line">
+				{{ post.date | date_to_string }}
+				by {% if post.author %}{{ post.author }}{% else %} {{ site.site_name }}{% endif %}
+			</time>
+
+		  	<p>{{ post.excerpt  | strip_html }} <a href="{{ post.url }}"> {%if post.language == 'arabic'%} اقرأ أكثر {% else %}Read more.{% endif %}</a> </p>
+
 		  </li>
 
     	{% endfor %}
