@@ -1,11 +1,14 @@
 ---
 layout: default
 ---
-
+{% if page.language == 'arabic' %}
+<article id="post-page" dir="rtl" lang="ar">
+{% else %}
 <article id="post-page">
+{% endif %}
 	<h2>{{ page.title }}</h2>
-	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line">{{ page.date | date_to_string }}
-		| Author: {% if page.author %}{{ page.author }}{% else %} {{ site.site_name }}{% endif %}</time>
+	<time datetime="{{ page.date | date_to_xmlschema }}" class="by-line" dir="ltr" style="position:relative;">{{ page.date | date_to_string }}
+		| by {% if page.author %}{{ page.author }}{% else %} {{ site.site_name }}{% endif %}</time>
 	<hr>
 	<div class="content">
 
