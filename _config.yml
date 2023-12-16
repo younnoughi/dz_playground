@@ -3,7 +3,7 @@ site_name: "DZ Playground"
 title: DZ Playground | Experimenting with technology.
 slogan: "Experimenting with technology"
 description: "DZ community of makers"
-url: "dz-playground.com"
+url: "https://dz-playground.com"
 author:
   name: "Yacine OUNNOUGHI "
   email: "ounnoughiyacine@gmail.com.com"
@@ -33,6 +33,7 @@ defaults:
 plugins:
   - jekyll-paginate
   - jekyll-target-blank
+  - jekyll-seo-tag
 
 target-blank:
    noopener: false
