@@ -28,22 +28,88 @@ $text-color: #222222;
 // $background-color: #FDFDFD;
 // $text-color: #222222;
 
+
+
+
+@mixin light-appearance {
+	html, body {
+		--bg: #fff;
+		--bg-secondary: #f3f4f6;
+		--headings: $main-color;
+		--text: #374151;
+		--text-secondary: #6b7280;
+		--links: $main-color;
+		--highlight: #FFECB2; // light yellow
+		--code-text: #9D174D;
+		--share-text: #999;
+	}
+  }
+  // -------------- THEME SWITCHER -------------- //
+  @mixin dark-appearance {
+	html, body  {
+		--headings: #74c0fc;
+		--links: $main-color;
+		--highlight: #41C7C7;
+		--bg:  #1f242A;
+		--bg-secondary: #323945;
+		--text: #adb5bd;
+		--text-secondary: #9CA3AF;
+		--code-text: #91A7FF;
+		--share-text: #C4C4C4;
+	};
+  }
+
+
+
+  html[data-theme="dark"] { @include dark-appearance; }
+  html[data-theme="light"] { @include light-appearance; }
+
+  @media (prefers-color-scheme: dark) {
+	body[data-theme="auto"] { @include dark-appearance; }
+  }
+  @media (prefers-color-scheme: light) {
+	body[data-theme="auto"] { @include light-appearance; }
+  }
+
+.theme-toggle {
+	color: var(--text);
+	background-color: transparent;
+	padding: 4px;
+	cursor: pointer;
+	margin: 1em;
+	position: fixed;
+	right: 50px;
+	top: 15px;
+	border: 2px transparent solid;
+	outline: none;
+  }
+
+  .theme-toggle:hover {
+	color: var(--links);
+	outline: none;
+  }
+  .theme-toggle:focus {
+	outline: none;
+  }
+
+
+
 /*- Base settings -*/
 
-html {
-	background-color: $background-color;
+html, body {
+	background-color: var(--bg);
 	font-size: 16px;
 	@media (min-width: 940px) {
 		font-size: 18px;
 	}
 	line-height: 1.5;
-	color: $text-color;
+	color: var(--text);
 }
 
 
 /*- Link -*/
 a {
-	color: $main-color;
+	color: var(--links);
 	text-decoration: none;
 	font-weight: 700;
 	&:hover,

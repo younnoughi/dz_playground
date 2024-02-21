@@ -1,0 +1,60 @@
+<button title="Toggle Theme" class="theme-toggle" id="btn-svg">
+
+</button>
+
+<script type="text/javascript">
+    window.addEventListener('load', themeChange);
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    let img_elm = document.createElement("img");
+    let img_src =  currentTheme === "dark"? "img/light.svg": "img/dark.svg";
+    img_elm.setAttribute("src", img_src);
+
+    document.getElementById('btn-svg').appendChild(img_elm);
+
+    function setSVG(theme)
+      {
+        if(theme === 'dark')
+        {
+            document.getElementById('btn-svg').innerHTML = '<img src="img/dark.svg" alt="Dark mode" id="theme_mode">';
+        }
+        else
+        {
+            document.getElementById('btn-svg').innerHTML = '<img src="img/light.svg" alt="Light mode" id="theme_mode">';
+        }
+      }
+
+    if (currentTheme)
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+
+    function themeChange() {
+      let button = document.querySelector('.theme-toggle');
+      let theme_mode_img = document.getElementById('theme_mode')
+
+      button.addEventListener('click', function (e) {
+        let currentTheme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme === 'dark') {
+          setSVG(currentTheme)
+          transition();
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        } else {
+          setSVG(currentTheme)
+          transition();
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+
+      let transition = () => {
+        document.documentElement.classList.add('transition');
+        window.setTimeout(() => {
+          document.documentElement.classList.remove('transition');
+        }, 1000);
+      }
+    }
+  </script>
+
+
+
