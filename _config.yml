@@ -6,11 +6,11 @@ description: "DZ community of makers"
 url: ""
 author:
   name: "Yacine OUNNOUGHI "
-  email: "ounnoughiyacine@gmail.com.com"
-  url: "/dz_playground"
+  email: "ounnoughiyacine@gmail.com"
+  url: ""
 
 # Build settings
-baseurl: /
+baseurl: /dz-playground/
 markdown: kramdown
 source: .
 destination: ./_site/
